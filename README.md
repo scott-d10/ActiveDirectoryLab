@@ -5,16 +5,14 @@ x
 <br />
 
 
-<h2>Languages and Utilities Used</h2>
+<h2>Environments and Utilities Used </h2>
 
-- <b>PowerShell</b> 
-- <b>Diskpart</b>
-
-<h2>Environments Used </h2>
-
-- <b>Windows 10</b> (21H2)
+- <b>Windows 11</b>
+- <b>VMWare</b>
 
 <h2>Project walk-through:</h2>
+
+<a href="ou-structure.html">OU Structure</a>
 
 <p align="center">
 Launch the utility: <br/>
