@@ -37,25 +37,35 @@ Once settings up the domain, Server Manager initiated a Prerequisite Check – t
 <br>
 <br>
 ### 2. Creating Organisational Units
-To create these, from the drop down menu Tools within Server Manager I selected Active Directory Users and Computers.  From here I right clicked on the example.local domain, selected new, then Organisation Unit.
+To create these, from the drop down menu Tools within Server Manager I selected Active Directory Users and Computers.  From here I right clicked on the example.local domain, selected new, then Organisational Unit.
 
 ![Creation Path](https://i.ibb.co/tTPJKsP0/OU-Filepath.png)
 <br>
 <br>
 <br>
-For this lab, I created three Organisational Units – Accounting, HR and Sales
+For this lab, I created three Organisational Units:<br>
+  Accounting; <br>
+  HR;<br>
+  Sales.
 
 ![Final OU’s](https://i.ibb.co/QhFJjqz/Completed-OUs.png)
 <br>
 <br>
 ### 3. Creating Users and Groups
-Now that the Organisational Units have been created, the groups and users within these can be added.  Firstly, I created three groups for the corresponding Organisation Units – HR_Users, Accounting_Users and Sales_Users.  I did this by right clicking the Organisational Unit down the left hand side, selecting New then Group.
+Now that the Organisational Units have been created, the groups and users within these can be added.  Firstly, I created three groups for the corresponding Organisational Units:<br>
+Accounting_Users;<br>
+HR_Users;<br>
+Sales_Users.<br>
+I did this by right clicking the Organisational Unit down the left hand side, selecting New then Group.
 
 ![Adding a Group](https://i.ibb.co/FqBjf7qv/Creating-a-Group.png)
 <br>
 <br>
 <br>
-Once these groups were created, I then added a user into each Organisation Unit – Harry Jones for HR, Angela Smith for Accounting and Simon White for Sales.
+Once these groups were created, I then added a user into each Organisational Unit:<br>
+Angela Smith for Accounting;<br>
+Harry Jones for HR;<br>
+Simon White for Sales.
 
 ![Adding a User](https://i.ibb.co/Z6KFv79K/Creating-User.png)
 <br>
@@ -67,18 +77,18 @@ Now both users and groups have been created within the Organisational Units, I c
 <br>
 <br>
 ### 4. Applying Group Policy
-I then created and applied the following Group Policy Objects for each department:
-- HR – Password and Screenlock policy;
-- Accounting – restrict removeable storage;
-- Sales – RDP access.
+I then created and applied the following Group Policy Objects for each department:<br>
+Accounting – restrict removeable storage;<br>
+HR – password and screenlock;<br>
+Sales – RDP access.
 
-To create the Group Policy’s, from the drop down menu, Tools, within Server Manager I selected Group Policy Management.  I then expanded Forest: example.local, Domains and finally examples.local.  Within here are the three Organisational Units I previously created along with their corresponding Groups and Users.  I then right clicked on the Organisation Unit, selected ‘Create a GPO in this domain, and Link it here’ and named it appropriately.  
+To create the Group Policies, from the drop down menu, Tools, within Server Manager I selected Group Policy Management.  I then expanded Forest: example.local, Domains and finally examples.local.  Within here are the three Organisational Units I previously created along with their corresponding Groups and Users.  I then right clicked on the Organisational Unit, selected ‘Create a GPO in this domain, and Link it here’ and named it appropriately.  
 
 ![Creating and Naming a GPO](https://i.ibb.co/MxkPzZPn/GPO-creation.png)
 <br>
 <br>
 <br>
-HR handles confidential employee information, so I chose to implement stricter session security.  To do this, once the Policy was created, I right clicked and selected ‘Edit’ to open the Group Policy Management Editor.  I navigated to User Configuration, Policies, Administrative Templates, Control Panel then Personalisation.  From here I configured ‘Enable Screen Saver’, ‘Password Protect the Screen Saver’ and ‘Screen Saver Timeout’ to Enable.
+HR handles confidential employee information, so I chose to implement stricter session security.  To do this, once the policy was created, I right clicked and selected ‘Edit’ to open the Group Policy Management Editor.  I navigated to User Configuration, Policies, Administrative Templates, Control Panel then Personalisation.  From here I configured ‘Enable Screen Saver’, ‘Password Protect the Screen Saver’ and ‘Screen Saver Timeout’ to Enable.
 
 ![HR GPO](https://i.ibb.co/0yTtRNtT/HR-GPO-s-Enabled.png)
 <br>
@@ -96,5 +106,5 @@ Sales staff often travel or work remotely, so enabling/configuring RDP access ma
 <br>
 <br>
 <br>
-Once the Group Policy Objects have been implemented, it’s important to run the PowerShell command ‘gpupdate /force’ on the client machines so they are applied to the users.
+Once the Group Policy Objects had been implemented, it was important to run the PowerShell command ‘gpupdate /force’ on the client machines so the policies were applied to the users.
 
