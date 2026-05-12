@@ -18,7 +18,7 @@ This home lab was built using Windows Server 2025 and VMware Workstation to demo
 - Group Policy Management
 
 ## Lab Objectives
-- Create a domain
+- Create a Domain
 - Build an Organisational structure
 - Create Users and Groups
 - Apply Group Policies
