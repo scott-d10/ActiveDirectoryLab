@@ -1,4 +1,4 @@
-# Active Directory Installation and Configuration Home Lab
+# Active Directory Home Lab
 
 ## Overview
 This home lab was built using Windows Server 2025 and VMware Workstation to demonstrate core Active Directory administration skills, including:
@@ -127,6 +127,7 @@ This lab helped strengthen my understanding of Active Directory administration, 
 
 - Active Directory Administration
 - Group Policy Management
+- Security Policy Management
 - Windows Server 2025
 - VMware Workstation
 - User & Group Management
